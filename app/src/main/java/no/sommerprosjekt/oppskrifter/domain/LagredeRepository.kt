@@ -1,7 +1,11 @@
 package no.sommerprosjekt.oppskrifter.domain
 
+import kotlinx.coroutines.flow.StateFlow
+import no.sommerprosjekt.oppskrifter.model.Oppskrift
+
 interface LagredeRepository {
     /**
-     * Skriv alle metoder som skal implementeres her
+     * henter liste med lagrede oppskrifter
      */
+    fun getLagredeFlow() : StateFlow<List<Oppskrift>>
 }
