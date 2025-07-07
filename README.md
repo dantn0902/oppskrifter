@@ -1,8 +1,11 @@
 #Funksjoner: 
 
 ##Viktig 
+
 Lagre funksjon + side med oversikt over alle oppskrifter 
+
 Skrive funksjon/side: Punkter for ingredienser + numre for å skrive trinn 
+
 Gamification 
 
  
@@ -15,5 +18,7 @@ Når man limer inn en oppskrift fra internett skal appen klare å konvertere til
 ##Ikke viktig 
 
 Dele funksjon 
+
 Browsing 
+
 Lage mapper for å kategorisere oppskrifter
