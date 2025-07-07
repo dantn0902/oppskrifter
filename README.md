@@ -4,11 +4,7 @@
 
 Lagre funksjon + side med oversikt over alle oppskrifter 
 
-Skrive funksjon/side 
-
-	Punkter for ingredienser 
-
-	Punkter med numre for å skrive trinn 
+Skrive funksjon/side: Punkter for ingredienser + numre for å skrive trinn 
 
 Gamification 
 
