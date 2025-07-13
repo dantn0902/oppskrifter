@@ -1,15 +1,18 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    kotlin("plugin.serialization") version "1.9.21"
+    kotlin("kapt")
+    //id("com.google.dagger.hilt.android")
 }
 
 android {
-    namespace = "no.sommerprosjekt.myapplication"
+    namespace = "no.sommerprosjekt.oppskrifter"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "no.sommerprosjekt.myapplication"
-        minSdk = 33
+        applicationId = "no.sommerprosjekt.oppskrifter"
+        minSdk = 26 //33
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -50,10 +53,11 @@ android {
 }
 
 dependencies {
-
-    implementation("androidx.core:core-ktx:1.16.0")
+    //implementation("androidx.core:core-ktx:1.16.0")
+    implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.9.1")
-    implementation("androidx.activity:activity-compose:1.10.1")
+    //implementation("androidx.activity:activity-compose:1.10.1")
+    implementation("androidx.activity:activity-compose:1.8.1")
     implementation(platform("androidx.compose:compose-bom:2023.08.00"))
     implementation("androidx.compose.ui:ui")
     implementation("androidx.compose.ui:ui-graphics")
@@ -66,4 +70,16 @@ dependencies {
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
+
+    // Ktor
+    val ktor_version = "2.3.10"
+    implementation("io.ktor:ktor-client-core:$ktor_version")
+    implementation("io.ktor:ktor-client-android:$ktor_version")
+    implementation("io.ktor:ktor-client-content-negotiation:$ktor_version")
+    implementation("io.ktor:ktor-serialization-gson:$ktor_version")
+
+    // Datastore
+    implementation("androidx.datastore:datastore-preferences:1.1.1")
+    implementation("androidx.datastore:datastore-core:1.1.1")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3")
 }
